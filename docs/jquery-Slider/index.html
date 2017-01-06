@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Content Slider</title>
+        <meta name="description" content="Jquery Content Slider" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="slide.it.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/site.css"/>
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <style>
+       article{display:block;clear:both}
+            .sHolder {
+                float:left;
+                margin:3px;
+                padding:2px 3px;
+                font-size:150%;
+            }
+            .slider {
+                border: 1px solid red;
+            }
+            .slide-pager, .slides li {
+                float: left
+            }
+            .slide-pager li {
+                float: left;
+                margin-right: 3px;
+            }
+            .slide-pager li.active {
+                color: red;
+            }
+            /*different styling for #s4 & #tweets*/
+            #s4 .slide-pager li {
+                padding: 4px;
+                margin: 2px;
+                font-size: 0px;
+                border-radius: 8px;
+                background-color: #000;
+                float: left;
+            }
+            #s4 .slide-pager li.active {
+                background-color:red
+            }
+			article{display:block;}
+			code{float:left;display:inline-block;border:1px solid #333;width:500px;height:240px;padding:3px;margin-top:38px;font-family:courier}
+        </style>
+    </head>
+    
+    <body>
+        <header>jquery slide.it.js</header>
+        <section id="content">
+            <article>
+                <div id="s1" class="sHolder">
+                    <h3>Zero Configuration</h3>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>this is 1</li>
+                            <li>this is 2</li>
+                            <li>this is 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <code>$('#s1').slideIt();</code>
+                </article>
+                <article>
+                 <div id="s3" class="sHolder">
+                    <h3>Vertical</h3>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>test 1</li>
+                            <li>test 2</li>
+                            <li>test 3</li>
+                        </ul>
+                    </div>
+                </div>
+				<code>$('#s3').slideIt({'orientation': 'vertical'});</code>
+				</article>
+                <article>
+                
+                <div id="s2" class="sHolder">
+                    <h3>No Controls, Interval 1000ms</h3>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>test 1</li>
+                            <li>test 2</li>
+                            <li>test 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <code>$('#s2').slideIt({'interval': 1000,'showNumbers': false});</code>
+                </article>
+                <article>
+               
+                <div id="s4" class="sHolder">
+                    <h3>Custom Controls</h3>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>test 1</li>
+                            <li>test 2</li>
+                            <li>test 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <code>&lt;style><br />
+						/*different styling for #s4/<br />
+                        #s4 .slide-pager li {<br />
+                        padding: 4px;<br />
+                        margin: 2px;<br />
+                        font-size: 0px;<br />
+                        border-radius: 8px;<br />
+                        background-color: #000;<br />
+                        float: left;<br />
+                        }<br />
+                        #s4 .slide-pager li.active {<br />
+                        background-color:red<br />
+                        }<br />
+                                                &lt;/style><br />
+		                $('#s4').slideIt({'showNumbers': false});<br />
+
+                </code>
+                </article>
+                <article>
+                <div id="s5" class="sHolder">
+                    <h3>Titled Controls</h3>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li data-title="Slide 1">test 1</li>
+                            <li data-title="Slide 2">test 2</li>
+                            <li data-title="Slide 3">test 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <code>//add data-title attribute to each li<br />$('#s5').slideIt({'showNumbers':false});</code>
+                </article>
+                <article>
+                
+                <div id="s6" class="sHolder">
+                    <h3>Titled Controls - Tab Style</h3>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li data-title="Slide 1">test 1</li>
+                            <li data-title="Slide 2">test 2</li>
+                            <li data-title="Slide 3">test 3</li>
+                        </ul>
+                    </div>
+                </div>   
+				<code>//add data-title attribute to each li<br />
+                $('#s6').slideIt({<br />
+					'auto':false,<br />
+					'animate':false,<br />
+					'showNumbers':false<br />
+                });</code>             
+            </article>
+            
+            
+                            <article>
+                
+                <div id="s7" class="sHolder">
+                    <h3>Tab Style - Hover</h3>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li data-title="Slide 1">test 1</li>
+                            <li data-title="Slide 2">test 2</li>
+                            <li data-title="Slide 3">test 3</li>
+                        </ul>
+                    </div>
+                </div>   
+				<code>//add data-title attribute to each li<br />
+                $('#s7').slideIt({<br />
+					'auto':false,<br />
+					'hover':true,<br />
+					'animate':false,<br />
+					'showNumbers':false<br />
+                });</code>             
+            </article>
+
+            
+            
+           
+        </section>
+        <footer>
+            <a href="jquery.slide.it.zip">download this experiment</a>
+            <br />back to
+            <a href="/">htmlstack</a>
+        </footer>
+        <script>
+            $(function () {
+                $('#s1').slideIt(); //zero configuration
+                $('#s2').slideIt({
+                    'interval': 1000,
+                    'showNumbers': false
+                }); //interval set to 1000ms, no numbers
+                $('#s3').slideIt({
+                    'orientation': 'vertical'
+                }); //vertical orientation
+                $('#s4').slideIt({
+                    'showNumbers': false
+                }); //no numbers, no auto scroll
+				
+				$('#s5').slideIt({
+					'showNumbers':false
+                }); //no numbers, no auto scroll
+				
+					$('#s6').slideIt({
+					'auto':false,
+					'animate':false,
+					'showNumbers':false
+                }); //no numbers, no auto scroll
+				
+				$('#s7').slideIt({
+					'auto':false,
+					'hover':true,
+					'animate':false,
+					'showNumbers':false
+                }); //no numbers, no auto scroll
+				
+            });
+        </script>
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-91014-16");
+                pageTracker._trackPageview();
+            } catch (err) {}
+        </script>
+    </body>
+
+</html>

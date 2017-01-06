@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacts</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" />
+
+<style>
+
+</style>
+</head>
+<body>
+
+<div id="one" data-role="page" id="jqm-home" class="type-home"  data-position="inline">
+	<div data-role="header" data-position="inline"  data-theme="b" >
+		<h1>Contacts</h1>
+		<a href="#three" data-icon="plus" class="ui-btn-right">New</a>
+	</div>
+	<div data-role="content">
+		<div class="content-primary">
+			<nav>
+				<ul id="contacts" data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f"></ul>
+			</nav>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="two" data-role="page">
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<a href="#one" data-icon="delete">Cancel</a>
+		<h1>Edit Contact</h1>
+		<a href="#one" data-icon="check" id="updateBtn" data-theme="b">Save</a>
+	</div>
+	<div data-role="content">
+		<div data-role="fieldcontain">
+			<input type="text" name="fname" id="fname" placeholder="First Name" />
+			<input  type="text" name="lname" id="lname" placeholder="Last Name"  />
+			<input type="text" name="email" id="email" placeholder="Email Address"  />
+            		<p><a href="#one" data-theme="a" id="delBtn" data-role="button">DELETE</a></p>
+
+		</div>
+	</div>
+</div>
+
+
+<div id="three" data-role="page">
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<a href="#one" data-icon="delete">Cancel</a>
+		<h1>Add Contact</h1>
+		<a href="#one" data-icon="check" id="addBtn" data-theme="b">Save</a>
+	</div>
+	<div data-role="content">
+		<div data-role="fieldcontain">
+			<input type="text" name="fname" id="newFname" placeholder="First Name" />
+			<input  type="text" name="lname" id="newLname" placeholder="Last Name"  />
+			<input type="text" name="email" id="newEmail" placeholder="Email Address"  />
+		</div>
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script>
+<script type="text/javascript" src="contacts.js"></script>
+<script>
+var db = new contacts("HTMLMobile", "1.0", "TestMobile", 1048576);
+db.get()
+</script>
+
+</body>
+</html>

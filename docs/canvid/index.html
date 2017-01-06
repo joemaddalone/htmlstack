@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Canvas + Video</title>
+<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript">
+var icount = 0;
+    var iCountHeight=2;
+	var iCountWidth=2;
+	var x=0;
+	var y=0;
+function makePlayer() {
+    /*
+
+	I am doing it this way because I forsee the
+	use of display:none video tags becoming more prevalent in my experiments
+
+	this is  the html structure we are rendering below
+	container
+		video
+		canvas
+
+	*/
+
+    var video = document.createElement("video");
+    video.id="player";
+    video.setAttribute('loop', 'true');
+    video.style.display="none";
+	video.innerHTML = '<source src="../video/meischeid.ogv" type="video/ogg" />';
+	video.innerHTML += '<source src="../video/meischeid.mp4" />';
+	video.play();
+
+
+	var container = document.getElementById('container');
+   	container.appendChild(video);
+
+
+	trace('video is now inside container');
+
+
+
+    var c = document.createElement('canvas');
+    c.id = "c";
+    c.height="450"
+    c.width="700";
+    container.appendChild(c);
+	trace('canvas created');
+
+	video.addEventListener('loadedmetadata', function() {
+		trace("in loadedmetadata");
+		setInterval(draw, 10);
+	}, false);
+
+
+
+    }
+    function trace(txt){//console.log(txt)
+	}
+
+    function draw(){
+	    var video = document.getElementById("player");
+    	var c = document.getElementById("c");
+		var w = video.videoWidth /1.5;
+		var h = video.videoHeight /1.5;
+		var cw = c.width;
+		var ch = c.height;
+		var ctx = c.getContext('2d');
+		if (iCountHeight+y+h>ch || iCountHeight+y<0 ){iCountHeight =- iCountHeight}
+		if (iCountWidth+x+w>cw || iCountWidth+x<0){iCountWidth =- iCountWidth}
+		x += iCountWidth;
+		y += iCountHeight;
+		ctx.clearRect (0, 0,  cw, ch);
+		ctx.drawImage(video, x, y, w, h);
+		watermark("c","htmlstack.com")
+	}
+
+	function watermark(id,txt) {
+		canvas = document.getElementById(id);
+		ctx = canvas.getContext('2d');
+
+		ctx.font         = '90px sans-serif';
+		//ctx.fillText(txt, canvas.width-(txt.length*15),canvas.height-30);
+		ctx.fillStyle    = 'rgba(255, 255, 255, 0.25)';
+		ctx.fillText(txt, 25,225)
+
+	}
+
+
+
+</script>
+
+
+<style>
+canvas{border:1px solid red}
+</style>
+
+</head>
+  <body onload="makePlayer()">
+
+
+<header>Canvas + Video (comes with FREE watermark!)</header>
+
+<section id="content">
+	<article>
+		<div id="container"></div>
+	</article>
+	<br clear="all" />
+	<article class="description">
+	<h2>still being lame.</h2>
+	<p>The short and sweet is that I hide a video player on the page then copy the image data from each frame, drawing it onto the canvas in the next position.
+	<br />I think there is a real future in hiding video tag presentation and then incorporating that data into canvas.
+	<br />Animation identical to <a href="../canvas">Motion w/ Image</a> just with a video instead of an image, watermark code from <a href="../watermark">here</a></p>
+	<p>I promise to be less lame with these experiments soon</p>
+	<p>This did expose a strange bug in Firefox.  Placing semi-transparent text on a canvas with a similar or no background-color results in the text with a strange green/blue/yellow artifact outlining the letters.  In the end I did work around it, but got tired of mucking around and decided to just leave it as an example of a bug.  So in Firefox you're seeing the issue, not so in Chrome or Safari.</p>
+
+
+	</article>
+</section>
+
+<footer>back to <a href="/">htmlstack</a></footer>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-91014-16");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

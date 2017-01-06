@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 frame-based animation</title>
+<meta name="description" content="CSS3 Loop Animation" />
+
+<style type="text/css" media="screen">
+	@-webkit-keyframes fall{
+		from {top: 100px;}
+		to 	{top: 450px;}
+	}
+
+	@-webkit-keyframes slide{
+		from {left: -0px;}
+		to 	{left: 500px;}
+	}
+
+
+	@-webkit-keyframes slideAround{
+	0% {left: 100px;}
+	10% {left: 110px;}
+	20% {left: 75px;}
+	30% {left: 80px;}
+	40% {left: 65px;}
+	50% {left: 150px;}
+	60% {left: 90px;}
+	70% {left: 300px;}
+	80% {left: 115px;}
+	90% {left: 125px;}
+	100% {left: 100px;}
+	}
+
+	@-webkit-keyframes crazy{
+	0% {left: 100px;-webkit-transform: rotate(180deg);}
+	25% {left: 300px;-webkit-transform: rotate(0deg);font-size:6em;color:#f00;}
+	28% {left: 250px;-webkit-transform: rotate(0deg);font-size:8em;color:#f00;text-shadow: 0px 0px 100px black;}
+	35% {left: 250px;-webkit-transform: rotate(0deg);font-size:3em;color:#000;}
+	50% {left: 75px;-webkit-transform: rotate(-180deg);}
+	75% {left: 200px;-webkit-transform: rotate(45deg);}
+	100% {left: 75px;-webkit-transform: rotate(-1200deg)}
+	}
+
+
+
+
+	#box .fall{
+		position: absolute;
+		top: 100;
+		-webkit-animation-name: fall;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: normal;
+		-webkit-animation-timing-function: ease-out;
+	}
+
+
+	#box .slide{
+		position: absolute;
+		top: 100;
+		-webkit-animation-name: slide;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: normal;
+		-webkit-animation-timing-function: ease-out;
+	}
+
+
+	#box .slideAround{
+		position: absolute;
+		top: 100;
+		left:250;
+		-webkit-animation-name: slideAround;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: normal;
+	}
+
+
+	#box .crazy{
+		position: absolute;
+		top: 100;
+		left:250;
+		-webkit-animation-name: crazy;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: normal;
+	}
+
+
+
+
+
+	.a1{
+		-webkit-animation-duration: 4s;
+	}
+	.a2{
+		-webkit-animation-duration: 8s;
+	}
+	.a3{
+		-webkit-animation-duration: 9s;
+	}
+
+	.a4{
+		-webkit-animation-duration: 3s;
+	}
+
+
+	.bigger{font-size:45px;color:#eee;z-index:-5}
+
+
+</style>
+
+	</head>
+	<body>
+	<header>CSS3 frame-based looping animation</header>
+	<section id="content">
+	<article>
+
+
+		<div id="box">
+			<div class="a1 fall" style="left:30px;">typography</div>
+			<div class="a2 fall" style="left:60px;">Falling</div>
+			<div class="a3 fall bigger" style="left:30px;">typography</div>
+
+			<div class="a1 slide" style="top:100px;">typography</div>
+			<div class="a2 slide" style="top:130px;">Sliding</div>
+			<div class="a3 slide bigger" style="top:110px;">typography</div>
+			<div class="a3 slide" style="top:150px;">CSS3</div>
+
+
+			<div class="a4 slideAround" style="top:260px;">I slide around</div>
+
+			<div class="a4 crazy" style="top:350px;">I am crazy</div>
+
+
+		</div>
+</article>
+
+</section>
+
+<footer>from <a href="http://www.htmlstack.com/">htmlstack</a> by <a href="http://www.twitter.com/joemaddalone">@joemaddalone</a></footer>
+</body>
+</html>

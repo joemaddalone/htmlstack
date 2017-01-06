@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Pure CSS Lightbox</title>
+<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+ <style>
+
+ @-webkit-keyframes fade{
+		   	from {opacity: 0;}
+			to 	{opacity: 1;}
+		}
+
+  @-webkit-keyframes grow{
+		   	from {height: 0px;}
+			to 	{height: 300px;;}
+		}
+
+.lbLink{display:block}
+.lb
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 999;
+	background: rgba(0,0,0,0.5);
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: fade;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+}
+.lb a
+{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+
+}
+.lb img
+{
+	padding: 5px 5px 45px 5px;
+	background: #ffffff;
+	-webkit-box-shadow: 0px 0px 15px #444;
+	-moz-box-shadow: 0px 0px 15px #444;
+	-webkit-animation-duration: 0.50s;
+	-webkit-animation-name: grow;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: ease-in;
+}
+
+.lb:target {
+
+	display: table;
+	height:100%
+	}
+    </style>
+  </head>
+  <body>
+<header>Pure CSS3 Lightbox</header>
+<section id="content">
+<a class="lbLink" href="#img1">Image 1</a>
+<a class="lbLink" href="#img2">Image 2</a>
+<a class="lbLink" href="#img1">Image 1b</a>
+<a class="lbLink" href="#img2">Image 2b</a>
+	<div class="lb" id="img1">
+		<a href="#close"><img src="../staticimages/z.jpg" alt="" /></a>
+	</div>
+
+	<div class="lb" id="img2">
+		<a href="#close"><img src="../staticimages/y.jpg" alt="" /></a>
+	</div>
+
+
+<article class="description">
+<p>Pure CSS3, no javascript.  Webkit browsers get a little bonus animation.  The :target pseudo selector is truly a powerful new feature in CSS3.
+<br />Targeting a link directly to the URL with the hash tag will trigger the "LighterBox" onload.  <a href="http://www.htmlstack.com/lighterbox/#img1">http://www.htmlstack.com/lighterbox/#img1</a><br />
+<br /><i>11-30-2010:</i>  Pretty basic at this point, but should be able to add in the standard lightbox features we have come to know and love.</p>
+<p>Another variation <a href="toolbar.html">here</a>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8961496835164159";
+/* htmlstack */
+google_ad_slot = "7745455605";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	</article>
+</section>
+
+
+<footer>back to <a href="/">htmlstack</a></footer>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-91014-16");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

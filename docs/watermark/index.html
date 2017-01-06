@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Canvas dynamic image watermark</title>
+<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <style>
+    canvas {border:1px solid #666}
+    </style>
+  </head>
+  <body onLoad="init()">
+<header>HTML5 Canvas dynamic image watermark</header>
+<section id="content">
+	<canvas id='canvas'></canvas>
+</section>
+
+<footer>back to <a href="/">htmlstack</a></footer>
+<script>
+function init(){
+watermark('canvas','y.jpg','htmlstack.com');
+}
+
+	function watermark(id,imgsrc,txt) {
+		canvas = document.getElementById(id);
+		if (canvas.getContext){
+			ctx = canvas.getContext('2d');
+			var img1 = new Image();
+			img1.src=imgsrc;
+			img1.onload = function(){
+				var imgWidth=img1.width;
+				var imgHeight=img1.height;
+				canvas.width= imgWidth;
+				canvas.height=imgHeight;
+				ctx.drawImage(img1,0,0);
+				ctx.fillStyle    = 'rgba(0, 0, 0, 0.25)';
+				ctx.font         = '30px sans-serif';
+				ctx.fillText(txt, canvas.width-(txt.length*15),canvas.height-30);
+				ctx.fillStyle    = 'rgba(255, 255, 255, 0.25)';
+				ctx.fillText(txt, canvas.width-(txt.length*15)-2,canvas.height-32)
+			}
+
+
+		}
+	}
+
+
+
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-91014-16");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

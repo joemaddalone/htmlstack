@@ -1,0 +1,1 @@
+/*!* Insert Title JS Library 0.1* "ce" function* Author: Joe Maddalone* www.insert-title.com*/    function ce(obj) {	var el = document.createElement(obj.type)	el.id = obj.id	if(obj.inner)	{	el.innerHTML = obj.inner	}		var x = obj.attr;		for (i in x)		{			el.setAttribute(i,x[i])		}	return el	  }

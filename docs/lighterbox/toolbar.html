@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Pure CSS Toolbar</title>
+<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+ <style>
+ 
+
+  @-webkit-keyframes grow{
+		   	from {width: 0px;}
+			to 	{width: 200px;;}
+		}
+ 
+.lbLink{display:block}
+.lb
+{
+
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	display: none; 
+	z-index: 999;
+	background: rgba(0,0,0,0.7);
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: grow;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+}
+
+.lb:target {
+	display: block;
+	height:100%;
+	width:200px;
+}
+
+
+.lb a:link,.lb a:visited{
+	display:block;
+	color:#fff;
+	padding:5px;
+	border-bottom:1px solid #fff;
+	}
+.lb a:hover{
+	background:#666;
+
+	}
+.lb h1{color:#fff;padding:15px;}
+
+    </style>
+  </head>
+  <body>
+<header>Pure CSS3 Side Bar</header>
+<section id="content">
+<a class="lbLink" href="#toolbar">Open ToolBar</a>
+<div class="lb" id="toolbar">
+<h1>Toolbar</h1> 
+    <a href="#close">Tool 1</a> 
+    <a href="#close">Tool 2</a> 
+    <a href="#close">Tool 3</a> 
+    <a href="#close">Tool 4</a> 
+    <a href="#close">Tool 5</a>                 
+
+</div> 
+
+
+
+<article class="description">
+<p>Pure CSS3, no javascript. Based on <a href="http://www.htmlstack.com/lighterbox/">Pure CSS3 Lightbox</a> code.  Each will get better</p>
+</article>
+
+</section>
+
+
+<footer>back to <a href="/">htmlstack</a></footer>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-91014-16");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

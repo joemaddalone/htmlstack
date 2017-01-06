@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 Gradients + Border Radius</title>
+<meta name="description" content="CSS3 Gradients" />
+<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<style>
+.circle{
+	-moz-border-radius:  150px 150px 150px 150px ;
+	-webkit-border-radius: 150px 150px 150px 150px ;
+	border-radius: 150px 150px 150px 150px 
+}
+	
+	
+
+.pearl {
+	position: relative;
+	float:left;
+	width: 150px;
+	height: 150px;
+	margin: 20px 20px;
+}
+
+
+.light {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #fff ;
+	background:	-moz-radial-gradient(20% 20%, rgba(255,255,255,0.5) 22%, rgba(255,255,255,0.2) 30%);
+
+
+}
+
+
+
+.overcast {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	-moz-box-shadow:inset rgba(0, 0, 0, 1) 0px 0px 48px;
+	-webkit-box-shadow:inset  rgba(0, 0, 0, 1) 0 0 48px;
+}
+
+.darkside {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: transparent -moz-radial-gradient(30% 30%, ellipse cover, rgba(0,0,0,0) 50%, rgba(0,0,0,0.9) 72%, rgba(0,0,0,0.6) 90%);
+}
+
+
+.outer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background:rgba(150, 150, 150, 0.2);
+	-moz-box-shadow:inset rgba(0, 0, 0, 0.3) 0 0 12px ;
+	-webkit-box-shadow:inset rgba(0, 0, 0, 0.3) 0 0 12px ;
+}
+
+
+
+
+
+		</style>
+
+	</head>
+	<body>
+	<header>CSS3 Radius + Gradients</header>
+	<section id="content">
+	<article>
+		<div class="pearl circle" style="background:rgba(0,255,255,0.5)"> 
+			<div class="light circle"></div> 
+			<div class="overcast circle"></div> 
+			<div class="darkside circle"></div> 
+			<div class="outer circle"></div> 
+	</div> 
+	<div class="pearl circle" style="background:rgba(255,0,255,0.5)"> 
+		<div class="light circle"></div> 
+			<div class="overcast circle"></div> 
+			<div class="darkside circle"></div> 
+			<div class="outer circle"></div> 
+	</div> 
+	<div class="pearl circle" style="background:rgba(255,255,0,0.5)"> 
+			<div class="light circle"></div> 
+			<div class="overcast circle"></div> 
+			<div class="darkside circle"></div> 
+			<div class="outer circle"></div> 
+	</div> 
+	<div class="pearl circle" style="background:rgba(255,0,0,0.5)"> 
+		<div class="light circle"></div> 
+			<div class="overcast circle"></div> 
+			<div class="darkside circle"></div> 
+			<div class="outer circle"></div> 
+	</div> 
+	<div class="pearl circle" style="background:rgba(0,255,0,0.5)"> 
+			<div class="light circle"></div> 
+			<div class="overcast circle"></div> 
+			<div class="darkside circle"></div> 
+			<div class="outer circle"></div> 
+	</div> 
+	<div class="pearl circle" style="background:rgba(0,0,255,0.5)"> 
+			<div class="light circle"></div> 
+			<div class="overcast circle"></div> 
+			<div class="darkside circle"></div> 
+			<div class="outer circle"></div> 
+	</div> 
+	</article>
+	<article class="description" style="clear:both">
+    <img src="capture.jpg" />
+	<p>Have not yet mastered the equivalent of some of this CSS to the webkit versions, but no images, and an abuse of CSS3 is always a fun Saturday afternoon affair for me.</p>
+	</article>
+</section>
+
+<footer><a href="gradients.zip">download this experiment</a> <br />back to <a href="/">htmlstack</a></footer>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-91014-16");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

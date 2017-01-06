@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Import</title>
+  </head>
+  <body>
+<header><h1>header</h1></header>
+<section id="content" class="page"></section>
+<footer><h2>footer</h2></footer>
+</body>
+
+
+
+<script type="text/javascript" src="js/ready.js"></script>
+<script type="text/javascript" src="js/it.js"></script>
+<script type="text/javascript" src="js/obj.js"></script>
+<script type="text/javascript" src="js/bind.js"></script>
+<script type="text/javascript" src="js/createElement.js"></script>
+<script type="text/javascript" src="js/include.js"></script>
+<script type='text/javascript'>
+(function () {
+    if (ready()) {
+		include("css/base.css","css")
+		var x = new obj({type:'a',id:'hello',inner:'hello world',attr: {type:'submit',value:'Hello'}})
+		//var x = new object with key value pairs, however attr is another object within the parent object
+		//_("#content").appendChild(ce(x))
+        
+		/*
+		bind(_("#hello"), "click", function () {
+            alert("you clicked")
+        })
+		*/
+		//this can all be condensed to:
+		_("#content").appendChild(ce(
+			new obj(
+			{
+			type:"a",
+			id:"hello2",
+			inner:"hello world 2",
+			attr:
+				{
+				type:"submit",
+				value:"Hello World"
+				}
+			})))
+			
+			bind(_("#hello2"), "click", function () {alert("you clicked hello #2")})
+		
+    }
+})()
+</script>
+
+
+
+</html>

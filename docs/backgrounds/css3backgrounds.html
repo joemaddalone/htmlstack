@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 Multiple Backgrounds</title>
+
+<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+
+<style>
+
+#photo1 {
+	background:
+	url(tack.png) 5px 5px no-repeat,
+	url(frame.png) top left no-repeat,
+	url(y.jpg)
+}
+
+
+#photo2 {
+	background:
+	url(tack.png) 200px 5px no-repeat,
+	url(frame.png) top left no-repeat,
+	url(z.jpg)
+}
+
+.photo{float:left;	position:relative;	height: 293px;	width: 243px;}
+.photo h1 {color:#0546A9; font-family: 'Reenie Beanie', arial, serif; position:absolute;top:230px;left:35px;}
+
+.rot10 {-webkit-transform: rotate(10deg);-moz-transform: rotate(10deg);rotation: 10deg;}
+.rot_10 {-webkit-transform: rotate(-10deg);-moz-transform: rotate(-10deg);rotation: -10deg;}
+.shadow
+{
+	-webkit-box-shadow: 3px 3px 7px #777;
+	-moz-box-shadow: 3px 3px 7px #777;
+	box-shadow: 3px 3px 7px #777;
+}
+header{margin-bottom:20px;}
+</style>
+
+</head>
+<body>
+
+<header>CSS3 Multiple Backgrounds</header>
+
+<section id="content">
+<article>
+<div id="photo1" class="photo rot10 shadow"><h1>Rotated photo</h1></div>
+<div id="photo2" class="photo rot_10 shadow"><h1>Font usage</h1></div>
+</article>
+
+<article class="description" style="clear:both">
+<br /><br /><br />
+<p>Two divs and some CSS3.</p>
+<p>The photo frames, tacks and photos themselves are layered backgrounds in the same div </p>
+
+</article>
+
+</section>
+
+<footer>from <a href="http://www.htmlstack.com/">htmlstack</a> by <a href="http://www.twitter.com/joemaddalone">@joemaddalone</a></footer>
+
+
+</body>
+</html>

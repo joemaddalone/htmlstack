@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Canvas Maze Game</title>
+<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <style>
+    canvas {border:1px solid #666}
+    </style>
+  </head>
+  <body>
+
+<section id="content">
+	<canvas height='400' id='canvas' width='400'>    </canvas>
+	<article>
+    
+    
+    
+    
+	</article>
+</section>
+<footer>back to <a href="/">htmlstack</a></footer>
+</body>
+
+</html>
+<script src="caat.js"></script>
+<script>
+
+(function () {
+    CAAT.Button = function () {
+        CAAT.Button.superclass.constructor.call(this);
+        return this
+    };
+    CAAT.Button.prototype = {
+        iNormal: 0,
+        iOver: 0,
+        iPress: 0,
+        iDisabled: 0,
+        iCurrent: 0,
+        fnOnClick: null,
+        enabled: true,
+        setEnabled: function (a) {
+            this.enabled = a
+        },
+        create: function (w,h,f,i) {
+            //this.setSpriteImage(a);
+            this.width = w;
+            this.height = h;
+            this.fnOnClick = f;
+            this.spriteIndex = i;
+            return this
+        },
+        mouseEnter: function () {
+            this.spriteIndex = this.iOver;
+            document.body.style.cursor = "pointer"
+        },
+        mouseExit: function () {
+            this.spriteIndex = this.iNormal;
+            document.body.style.cursor = "default"
+        },
+        mouseDown: function () {
+            this.spriteIndex = this.iPress
+        },
+        mouseUp: function () {
+            this.spriteIndex = this.iNormal
+        },
+        mouseClick: function () {
+            this.enabled && null != this.fnOnClick && this.fnOnClick()
+        },
+        toString: function () {
+            return "CAAT.Button " + this.iNormal
+        }
+    };
+})();
+
+
+    var director = new CAAT.Director().initialize(
+            600,    // 100 pixels wide
+            600,    // 100 pixels across
+            document.getElementById('canvas'));
+ 
+    var scene=     new CAAT.Scene().create();
+ 
+ 
+ 
+	var piece=(new CAAT.Button).create().create(100,100,'123',0)
+	
+
+	
+
+	/*
+	piece.mouseEnter= mouseMoveHandler;
+	piece.mouseExit= mouseExitHandler;
+	piece.mouseClick= mouseClickHandler;
+	*/
+	
+    scene.addChild(piece);
+
+    director.addScene(scene);
+ 
+    director.loop(30);
+</script>
+
+<script type='text/javascript'>
+/*
+ * Triangle Game
+ * http://htmlstack.com/
+ *
+ * Author, Joe Maddalone
+*/
+
+  Array.prototype._forEach = function (fun) {
+    var len = this.length;
+    if (typeof fun != "function") throw new TypeError();
+    var thisp = arguments[1];
+    for (var i = len; i > 0; i--) {
+      if (i in this) fun.call(thisp, this[i], i, this);
+    }
+  };
+
+
+
+
+var game = function(b,u){
+	
+	this.init(b,u)
+	}
+	
+
+game.prototype = {
+
+		init: function (b,u) {
+			this.base= b
+			this.upper = u
+			this.dat = new Array(b)
+			for (var row = 0; row < this.base; row++) {
+				this.dat[row] = new Array(this.base)
+				for (var col = 0; col < this.base; col++) {
+					this.dat[row][col] = 0
+				}
+				for (var col = 0; col <= row; col++) {
+					this.dat[row][col] = this.retRnd(this.upper)
+				}
+			}
+
+		},
+		retRnd: function (x) {
+			  var ret = Math.floor(Math.random() * (x + 1));
+			  if (ret == 0) {
+				    return 1
+			  } else {
+				    return ret
+			  }
+		},
+		solve: function(t) {
+				t._forEach(
+				  function (rowVal, row, arr) {
+				    rowVal.forEach(
+					    function (colVal, col, arr2) {
+						   //console.log(arr2[col])
+					      t[row - 1][col] += (t[row][col] > t[row][col + 1] ? t[row][col] : t[row][col + 1])
+					    })
+			  })
+			  return t[0][0]
+		},
+		solution: function(){
+			return this.solve(this.dat.slice())}
+	}
+
+
+var g= new game(100,99)
+//alert(g.solution())
+
+
+</script>

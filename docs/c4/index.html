@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 video custom controls with canvas as volume control</title>
+<meta name="description" content="canvas HTML5 video custom controls" />
+<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<link  rel="stylesheet" type="text/css" href="controls.css" />
+<script type="text/javascript" src="controls.js"></script>
+<style>
+
+/* NON Video Stuffs */
+.dropCase{
+float: left;
+ font-family: Georgia,serif;
+ font-size: 400%;
+ line-height: 0.9em;
+ margin-right: 0.03em;
+ margin-bottom:-0.1em;
+}
+
+.description{
+width: 640px;;
+}
+
+pre{padding:10px;}
+</style>
+
+</head>
+<body onLoad="makePlayer('player','meischeid');">
+<header>prototype dynamic HTML5 video controls</header>
+<section id="content">
+<article>
+    <video id="player" poster="poster.png" loop>
+
+    </video>
+</article>
+<br clear="both" /><article class="description">
+<p><span class="dropCase">S</span>till need to work on this a bit more when I have some time.  Code is already set up to accept any sized video, but want to add in the ability to easily have multiple instances on the same page.</p>
+<p>I also have it in mnd that the whole thing should be able to be controlled with the keyboard.  Up and down for volume, left and right for video scrubbing.  I left an opening in the current code to deal with this.</p>
+<p>Added:  Clicking on the video itself will pause/play, fullscreen function works and can be exited with click or "Esc" key.  Got Firefox supported again, well at least 3.6.
+<p>Once I get those sorted out, onto a playlist!</p>
+<p>Still not the best "looking" player, but this is how I learn, and I can work on that later.</p>
+
+</article>
+
+</section>
+
+<footer>back to <a href="/">htmlstack</a></footer>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-91014-16");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

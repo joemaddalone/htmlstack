@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 box-shadow Set</title>
+	<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<style>
+	.shadow {
+		position: relative;
+		z-index: 0;
+		padding: 0;
+		text-align: center;
+	}
+	.shadow:before, .shadow:after {
+		position: absolute;
+		z-index: -1;
+	}
+	.shadow.popout:before {
+		content: "";
+		bottom: 4px;
+		left:5%;
+		width: 90%;
+		height: 15px;
+		box-shadow:
+			#000 0px 0px 45px,
+			#000 0px 0px 25px, 
+			#000 0px 0px 12px;
+		-moz-box-shadow:
+			#000 0px 0px 45px,
+			#000 0px 0px 25px, 
+			#000 0px 0px 12px;			
+		-webkit-box-shadow:
+			#000 0px 0px 45px,
+			#000 0px 0px 25px, 
+			#000 0px 0px 12px;			
+		border-radius:  1px;
+		-moz-border-radius:  1px;		
+		-webkit-border-radius:  1px;				
+	}
+	.shadow.bend:before,.shadow.bend:after {
+		content: "";
+		bottom: 11px;
+		width: 80%;
+		height: 15px;
+		box-shadow:
+			#000 0px 0px 40px,
+			#000 0px 0px 25px;
+		-moz-box-shadow:
+			#000 0px 0px 40px,
+			#000 0px 0px 25px;
+		-webkit-box-shadow:
+			#000 0px 0px 40px,
+			#000 0px 0px 25px;			  			  
+		-moz-border-radius:  15px;	  
+		-webkit-border-radius:  15px;	    
+		border-radius:  15px;	  
+		-moz-border-radius:  15px;	  		
+		-webkit-border-radius:  15px;	  				
+	}
+	.shadow.peel:before ,.shadow.peel:after{
+		content: "";
+		bottom: 13px;
+		width: 70%;
+		height: 20px;
+		box-shadow:
+			#000 0px 4px 21px,
+			#000 0px 0px 20px;
+		-webkit-box-shadow:
+			#000 0px 4px 21px,
+			#000 0px 0px 20px;			  
+		-moz-box-shadow:
+			#000 4px 0px 18px,
+			#000 0px 0px 20px;			  
+	}	
+	.shadow.peel:before {
+		right: 10px;
+		-moz-transform: rotate(4deg);
+		-webkit-transform: rotate(4deg);
+		transform: rotate(4deg); 
+		-ms-transform: rotate(4deg);
+ 
+	}
+	.shadow.peel:after {
+		left: 10px;
+		-moz-transform: rotate(-4deg);
+		-webkit-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+		-ms-transform: rotate(-4deg);
+  
+	}
+	.shadow.bend:before {right: 10px;}
+	.shadow.bend:after {left: 10px;}
+	.shadow.hover:before {
+		content: "";
+		bottom: 0px;
+		left:2%;
+		width: 96%;
+		height: 15px;
+		box-shadow:
+			rgba(0,0,0,0.2) 0px 35px 15px,
+			rgba(0,0,0,0.1) 0px 35px 25px,
+			rgba(0,0,0,0.2) 0px 35px 35px;
+		-moz-box-shadow:
+			rgba(0,0,0,0.2) 0px 35px 15px,
+			rgba(0,0,0,0.1) 0px 35px 25px,
+			rgba(0,0,0,0.2) 0px 35px 35px;	
+		-webkit-box-shadow:
+			rgba(0,0,0,0.2) 0px 35px 15px,
+			rgba(0,0,0,0.1) 0px 35px 25px,
+			rgba(0,0,0,0.2) 0px 35px 35px;		
+		border-radius:  100px 100px 0px 0px;
+		-moz-border-radius:  100px 100px 0px 0px;  
+		-webkit-border-radius:  100px 100px 0px 0px;  
+	}
+	.shadow.hover img{
+		box-shadow:#999 0px 0px 5px;
+		-moz-box-shadow:#999 0px 0px 5px;
+		-webkit-box-shadow:#999 0px 0px 5px
+		}
+	h1{margin:25px;}
+	</style>
+</head>
+<body>
+	<header>CSS3 Shadow Set</header>
+	<section id="content">
+		<article>
+			<h1>popout</h1>
+			<span class="shadow popout"><img src="../staticImages/y.jpg" /></span>
+			<h1>peel</h1>
+			<span class="shadow peel"><img src="../staticImages/y.jpg" /></span>
+			<h1>bend</h1>
+			<span class="shadow bend"><img src="../staticImages/y.jpg" /></span>
+			<h1>hover</h1>
+			<span class="shadow hover"><img src="../staticImages/y.jpg" /></span>
+		</article>
+		<article class="description" style="clear:both;margin-top:45px;">
+			<p>...really not sure it was worth it.  I think I could probably do this a lot easier with :before gradients, but wanted to use only box-shadow on this as a ridiculous proof-of-concept that these things could even be done.</p>
+		</article>
+        
+	</section>
+	<footer><a href="box-shadows.zip">download this experiment</a> <br />back to <a href="/">htmlstack</a></footer>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-91014-16");
+		pageTracker._trackPageview();
+	} catch(err) {}</script>
+</body>
+</html>

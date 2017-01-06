@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>HTML5 Experiments</title>
+	<link  rel="stylesheet" type="text/css" href="css/site.css" />
+	<link rel="shortcut icon" href="http://www.htmlstack.com/favicon.ico" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<style>
+
+.articles li a{
+	position: relative;
+	float:left;
+	width:150px;
+	height:80px;
+	margin:5px;
+	border:1px solid #fff;
+	background-color:#ccc;
+	color:#222;
+	font-weight:bold;
+}
+
+h2{font-size:12px;padding:5px;}
+.articles li a,.browser {
+	-webkit-transition-duration: .25s;
+	-moz-transition-duration: .25s;
+	-o-transition-duration: .25s;
+	transition-duration: .25s;
+}
+
+
+
+.browser {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 5px;
+	opacity: 0;
+	text-align: right;
+	font-size:10px;
+	width:140px;;
+}
+
+.articles li a:hover{
+border:1px solid #222;
+text-shadow:
+-2px -1px 4px #999,
+2px 2px 2px #000,
+2px 2px 2px #222;
+color:#fff;
+}
+
+.articles li a:hover >.browser {
+	display: block;
+	opacity: 1;
+	color: #fff;
+	background-color: #222;
+
+}
+#content{
+	width:90%;
+	margin:15px auto;
+	}
+</style>
+	</head>
+	<body>
+<header>htmlstack.com</header>
+<section id="content">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8961496835164159";
+/* htmlstack */
+google_ad_slot = "7745455605";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    <ul class="articles">
+        <li><a href="jquery-slider"><h2>jQuery slide.it</h2><span class="browser">***</span></a></li>
+        <li><a href="canvassnake"><h2>Canvas Snake</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="box-shadows"><h2>CSS3 Box Shadows</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="tooltips"><h2>CSS3 Tooltips</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="triangle"><h2>Numbers Game</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="checkbox"><h2>Canvas Checkbox</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="time"><h2>Canvas Clock Thing</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub></span></a></li>
+        <li><a href="pseudoTween"><h2>Canvas Pseudo Tweening</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="canvasControls"><h2>Canvas Video Controls</h2><span class="browser">Chrome,Firefox,Safari</span></a></li>
+        <li><a href="lighterbox"><h2>CSS3 Lightbox</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="gradients"><h2>Radius + Gradients</h2><span class="browser">Firefox</span></a></li>
+        <li><a href="backgrounds"><h2>Backgrounds x 3</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="canvid2"><h2>Canvas + Video 2</h2><span class="browser">Chrome</span></a></li>
+        <li><a href="canvid"><h2>Canvas + Video</h2><span class="browser">Chrome,Firefox,Safari</span></a></li>
+        <li><a href="loop"><h2>Looping</h2><span class="browser">Chrome,Safari</span></a></li>
+        <li><a href="watermark"><h2>Watermark</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="c4"><h2>Video Player</h2><span class="browser">Chrome,Firefox,Safari</span></a></li>
+        <li><a href="animation"><h2>CSS3 2D</h2><span class="browser">Chrome,Firefox,Safari</span></a></li>
+        <li><a href="canvas"><h2>Random Canvas</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="shapes"><h2>Shapes</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub></span></a></li>
+        <li><a href="maze"><h2>Maze</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,</span></a></li>
+        <li><a href="columns"><h2>Multi Column</h2><span class="browser">Chrome,Firefox,Safari</span></a></li>
+        <li><a href="geo"><h2>Geolocation</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub></span></a></li>
+        <li><a href="colorgrid"><h2>Grid</h2><span class="browser">Chrome,Firefox,IE<sub>9</sub>,Safari</span></a></li>
+        <li><a href="video"><h2>Video</h2><span class="browser">Chrome,Firefox,Safari</span></a></li>
+        <li><a href="DB"><h2>WebSQL</h2><span class="browser">Chrome,Safari</span></a></li>
+    </ul>
+</section>
+<footer> <a href="http://www.twitter.com/joemaddalone">@joemaddalone</a> works in <a href="http://www.insert-title.com">Chicago</a> and shares at <a href="http://www.joemaddalone.com">joemaddalone.com</a> and <a href="http://www.javascriptoo.com">JavaScriptOO.com</a> </footer>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-91014-16");
+		pageTracker._trackPageview();
+	} catch(err) {}</script>
+</body>
+</html>

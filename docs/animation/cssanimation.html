@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 2D Animation</title>
+<style>
+
+
+.spin,.grow,.fade,.rounder,.skew{
+padding:15px;
+width:50px;
+height:50px;
+float:left;
+margin:15px;
+background-color:#000;
+color:#fff;
+-webkit-transition-duration: 0.75s;
+-moz-transition-duration:0.75s;
+transition-duration: 0.75s;
+
+}
+
+
+
+.spin:hover{
+-webkit-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+
+
+
+}
+
+.grow:hover{
+padding:100px;
+}
+
+.fade:hover{
+opacity:0
+}
+
+.rounder:hover{
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+}
+
+
+.skew:hover{
+-webkit-transform: skew(10deg, 20deg);
+-moz-transform: skew(10deg, 20deg);
+}
+.description{
+width: 640px;;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>CSS3 2D animations</header>
+
+<section id="content">
+<article>
+<h1>These only half-work in FF < 3.7, Try Chrome or Safari to see it correctly</h1>
+
+<div class="spin">i spin</div>
+<div class="grow">i grow</div>
+<div class="grow spin">i spin & grow</div>
+<div class="fade">i fade</div>
+<div class="rounder">i round?</div>
+<div class="skew">i skew</div>
+</article>
+<br clear="both" /><article class="description">
+<p>"-moz-transition-duration" Introduced in Gecko 1.9.3 (Firefox 3.7)</p>
+</article>
+</section>
+
+<footer>from <a href="http://www.htmlstack.com/">htmlstack</a> by <a href="http://www.twitter.com/joemaddalone">@joemaddalone</a></footer>
+
+</body>
+</html>

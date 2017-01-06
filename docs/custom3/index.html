@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 video custom controls with canvas as volume control</title>
+<meta name="description" content="controlling volume with canvas in HTML5 video with custom controls" />
+<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link  rel="stylesheet" type="text/css" href="controls.css" />
+<script type="text/javascript" src="controls.js"></script>
+<style>
+
+/* NON Video Stuffs */
+.dropCase{
+float: left;
+ font-family: Georgia,serif;
+ font-size: 400%;
+ line-height: 0.9em;
+ margin-right: 0.03em;
+ margin-bottom:-0.1em;
+}
+
+.description{
+width: 640px;;
+}
+
+pre{padding:10px;}
+</style>
+
+</head>
+<body onLoad="makePlayer('player','meischeid');">
+<header>HTML5 video custom controls with canvas as volume control (Webkit only right now)</header>
+<section id="content">
+<article>
+    <video id="player" loop>
+
+    </video>
+</article>
+<br clear="both" /><article class="description">
+<p><span class="dropCase">G</span>etting pretty happy with this.  Video & volume scrubbers are both canvas.  The code is similar enough for both that I shuold be able to write a generic scrubber handler piece from this.
+I made them both taller so that the highlighting the adjacent elements is less likely.  This also allowed me to trim back on the CSS needed to position everything. </p>
+
+<p> The player/controller also adapts to the size of the video element automatically.  Mostly it's just the video scrubber that has to be adjusted to 40% of the player area +8 pixels, or (player.videoWidth*.4)+8.  The plus 8 is meant to be a buffer to deal with the fact that right now you have to scroll out of the scrubber to hit 100% duration or volume, but I have not wrapped that up yet.</p>
+
+<p>Pretty happy to have taken this so far w/o any real dependencies, no jQuery, prototype, etc.  Firefox is proving to be a cunt of a browser right now, but will get her tamed a bit next time around.  The code for fullscreen was just kinda thrown together at the last minute, but will address that as well.</p>
+</article>
+
+</section>
+
+<footer>back to <a href="/">htmlstack</a></footer>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-91014-16");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

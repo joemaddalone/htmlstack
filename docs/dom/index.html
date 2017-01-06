@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+ol{list-style-type: decimal-leading-zero}
+</style>
+</head>
+
+<body>
+
+
+<script>
+(function(){
+var list = []
+	var str = '';
+	var s = window.location.search.substring(1)
+
+	str+='<ol><li>' + 	s + 	'<p>' + eval(s) + 
+	'</p><ol>'		
+
+	
+	for (i in eval(s)){
+		str += '<li><a href="?' 
+		str += s + '.' + i + '">' + i
+		var ret = s + '.' + i;
+		str += '</a><p>'
+		if(typeof eval(ret) == 'object')
+		{str+=ret}
+		else
+		{str+=eval(ret)}
+		
+		str += '</p></li>'
+	}
+	str+='</ol><li></ol>'
+	document.write(str)
+})()
+</script>
+
+</body>
+</html>

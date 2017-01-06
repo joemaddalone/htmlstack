@@ -1,0 +1,159 @@
+<!doctype html>
+<head>
+<title>HTML5 video custom controls</title>
+<meta name="description" content="controlling HTML5 video with custom controls" />
+
+<script>
+
+function load()
+{
+
+		var player =     document.getElementById('player');
+		var controller = document.getElementById('controls');
+		var playbutton = document.getElementById('playpause');
+
+
+		/*
+		this was working, but got a bit screwy
+		player.addEventListener('loadedmetadata',function(e) {
+			document.getElementById('duration').innerHTML =  fixtime(player.duration);
+		});
+		*/
+
+		player.addEventListener('timeupdate',function(e) {
+			document.getElementById('duration').innerHTML =  fixtime(player.duration);
+			document.getElementById('display').innerHTML = fixtime(player.currentTime) + "&nbsp;/&nbsp;";
+			document.getElementById('scrub').value = (player.currentTime/player.duration)*100;
+		});
+
+		/* start */
+		player.addEventListener('play',function(e) {playbutton.innerHTML='<button class="pause"></button>';});
+
+		/* paused */
+		player.addEventListener('pause',function(e) {playbutton.innerHTML='<button class="play"></button>';});
+
+		/* end */
+		player.addEventListener('ended',function(e) {playbutton.innerHTML='<button class="play"></button>';});
+
+		/* playbutton clicked */
+		playbutton.addEventListener('click',function() {
+			if (player.paused) {player.play();}
+				else {
+					if (player.ended) {
+						player.currentTime=0;
+						player.innerHTML='<div class="pause"></div>';
+						player.play();
+					} else {
+						player.pause();
+					}
+			}
+		});
+
+		function fixtime(t){
+			var s=t
+			var h=Math.floor(s/3600);
+			s=s%3600;
+			var m=Math.floor(s/60);
+			s=Math.floor(s%60);
+			/* pad the minute and second strings to two digits */
+			if (s.toString().length < 2) s="0"+s;
+			if (m.toString().length < 2) m="0"+m;
+			return h+":"+m+":"+s;
+		}
+
+
+
+}
+</script>
+<link  rel="stylesheet" type="text/css" href="../css/site.css" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<style>
+#controls {
+	width: 640px;
+	border-radius: 5px;
+	border: 1px #333 solid;
+	height: 60px;
+}
+
+.play,.pause{
+	float:left;width:65px;
+	}
+
+#player{height:385px;width:640px;background-color:black}
+
+
+#controls,.pause,.play{background-image:url(controls.png);}
+
+#controls{height:25px;
+	background-position:0 0px;border:0;
+	padding:0px 2px;margin:0;
+	}
+
+.play{
+	background-position:-0px -25px;width:27px;height:25px;border:0;
+	padding:0;margin:0;display:block}
+
+.play:hover{background-position:-28px -25px}
+
+.pause{
+	background-position:-0px -50px;width:27px;height:25px;border:0;
+	padding:0;margin:0;display:block}
+.pause:hover{background-position:-28px -50px}
+
+#display,#duration{float:left;color:#fff;padding-top:1px;font-size:11px;font-weight:bold}
+
+#scrub{float:left;margin-right:10px;width:400px;border:0;}
+
+</style>
+
+</head>
+
+<body onload="load()">
+<header>Custom HTML5 video controls #1</header>
+<section id="content">
+<article>
+	<video width="640" height="360" id="player" loop>
+		<source src="../video/htmlstack.ogv" type="video/ogg" />
+		<source src="../video/htmlstack.mp4" />
+
+		<i style="color:white">Your browser does not support the &lt;video> element, yet</i>
+	</video>
+	<div id="controls">
+		<div id="playpause"><button class="play"></button></div>
+		<input type="range"
+			min="0"
+			max="100"
+			value="0"
+			step="1"
+			name="scrub"
+			id="scrub" readonly />
+		<span id="display">--:--:--&nbsp;/&nbsp;</span>
+		<span id="duration">--:--:--</span>
+	</div>
+</article>
+
+<article>
+<p>See Also: <a href="../custom2">Canvas as HTML5 Video Scrubber (#2)</a> and <a href="../custom3">Adding Canvas HTML5 Volume Controls (#3)</a></p>
+<p>Obviously this is tapping into the bare minimum of the video controls, but hey, you gotta start somewhere, right?</p>
+<p>Using a range input as a scrubber seemed like an obvious choice for me, but afterwards it really proved to be a big fucking pain in my ass.</p>
+<p>The controls are rendered using the following image, loosely based on the YouTube one.</p>
+<img src="controls.png" />
+
+
+</article>
+</section>
+
+<footer>back to <a href="/">htmlstack</a></footer>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-91014-16");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
