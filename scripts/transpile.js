@@ -1,5 +1,4 @@
 const fs = require( 'fs-extra' );
-const path = require( 'path' );
 const glob = require( 'glob' );
 const babel = require( "babel-core" );
 const processFiles = ( file ) => {
