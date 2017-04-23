@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas + Video</title>
+    <meta name="description" content="Combining canvas and video elements">
+    <style>
+        canvas{border:1px solid red}
+    </style>
+</head>
+<body class="flex-col justify-center" style="height: 100%;">
+<section id="content" style="width: 800px;">
+    <article>
+        <div id="container"></div>
+    </article>
+    <br clear="all"/>
+    <article class="description">
+        <h2>still being lame.</h2>
+        <p>The short and sweet is that I hide a video player on the page then copy the image data from each frame,
+            drawing it onto the canvas in the next position.
+            <br/>I think there is a real future in hiding video tag presentation and then incorporating that data into
+            canvas.
+            <br/>Animation identical to <a href="../canvas">Motion w/ Image</a> just with a video instead of an image,
+            watermark code from <a href="../watermark">here</a></p>
+        <p>I promise to be less lame with these experiments soon</p>
+        <p>This did expose a strange bug in Firefox. Placing semi-transparent text on a canvas with a similar or no
+            background-color results in the text with a strange green/blue/yellow artifact outlining the letters. In the
+            end I did work around it, but got tired of mucking around and decided to just leave it as an example of a
+            bug. So in Firefox you're seeing the issue, not so in Chrome or Safari.</p>
+    </article>
+</section>
+<script src="canvid.js"></script>
+</body>
+</html>

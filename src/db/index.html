@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSQL</title>
+    <meta name="description" content="WebSQL example">
+    <link rel="stylesheet" href="db.css">
+</head>
+<body class="flex-col justify-center" style="height: 100%">
+<section id="content">
+    <article>
+        <div id="interface">
+            <div id="resTitle">My Contacts</div>
+            <div id="editTitle">Add New</div>
+            <div id="results"></div>
+            <div id="info"></div>
+        </div>
+    </article>
+    <article class="description" style="clear:both">
+        <p>So the gist of it is that you can add, edit, update, and delete information in this interface.</p>
+        <p>There are no cookies or session variables and nothing happens on the server side. This is all communicating
+            with a database that has just been placed on your machine... crazy right?</p>
+        <p>What this also means is that you can disconnect your internet and the app will still work.</p>
+    </article>
+</section>
+<script src="websql.js"></script>
+</body>
+</html>

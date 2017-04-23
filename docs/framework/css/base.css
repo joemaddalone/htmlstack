@@ -1,9 +1,0 @@
-@import "libraries.css";
-@import "content.css";
-@import "grids.css";
-@import "template.css";
-
-
-footer,header{padding:20px;}
-
-.button{display:block;cursor:pointer}

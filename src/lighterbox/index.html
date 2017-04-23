@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS3 Lightbox</title>
+    <meta name="description" content="Modals in CSS3 only">
+    <link rel="stylesheet" href="lighterbox.css">
+</head>
+<body class="flex-col justify-center" style="height: 100%;margin-top: 120px;">
+<section id="content">
+    <a class="lbLink" href="#img1">Image 1</a>
+    <a class="lbLink" href="#img2">Image 2</a>
+    <a class="lbLink" href="#img1">Image 1b</a>
+    <a class="lbLink" href="#img2">Image 2b</a>
+    <div class="lb" id="img1">
+        <a href="#close"><img src="/staticImages/z.jpg" alt=""/></a>
+    </div>
+
+    <div class="lb" id="img2">
+        <a href="#close"><img src="/staticImages/y.jpg" alt=""/></a>
+    </div>
+
+
+    <article class="description">
+        <p>Pure CSS3, no javascript. Webkit browsers get a little bonus animation. The :target pseudo selector is truly
+            a powerful new feature in CSS3.
+            <br/>Targeting a link directly to the URL with the hash tag will trigger the "LighterBox" onload. <a
+                    href="#img1">#img1</a><br/>
+            <br/><i>11-30-2010:</i> Pretty basic at this point, but should be able to add in the standard lightbox
+            features we have come to know and love.</p>
+</body>
+</html>

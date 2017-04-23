@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery slider plugin</title>
+    <meta name="description" content="Creating a jquery slides plugin">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="slide.it.js"></script>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+    <link rel="stylesheet" href="slider.css">
+    <style>
+        article{
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+<body class="flex-col justify-center" style="height: 100%;">
+<section id="content" style="width: 800px;">
+    <article>
+        <div id="s1" class="sHolder">
+            <h3>Zero Configuration</h3>
+            <div class="slider">
+                <ul class="slides">
+                    <li>this is 1</li>
+                    <li>this is 2</li>
+                    <li>this is 3</li>
+                </ul>
+            </div>
+        </div>
+        <code>$('#s1').slideIt();</code>
+    </article>
+    <article>
+        <div id="s3" class="sHolder">
+            <h3>Vertical</h3>
+            <div class="slider">
+                <ul class="slides">
+                    <li>test 1</li>
+                    <li>test 2</li>
+                    <li>test 3</li>
+                </ul>
+            </div>
+        </div>
+        <code>$('#s3').slideIt({'orientation': 'vertical'});</code>
+    </article>
+    <article>
+        <div id="s2" class="sHolder">
+            <h3>No Controls, Interval 1s</h3>
+            <div class="slider">
+                <ul class="slides">
+                    <li>test 1</li>
+                    <li>test 2</li>
+                    <li>test 3</li>
+                </ul>
+            </div>
+        </div>
+        <code>$('#s2').slideIt({'interval': 1000,'showNumbers': false});</code>
+    </article>
+    <article>
+
+        <div id="s4" class="sHolder">
+            <h3>Custom Controls</h3>
+            <div class="slider">
+                <ul class="slides">
+                    <li>test 1</li>
+                    <li>test 2</li>
+                    <li>test 3</li>
+                </ul>
+            </div>
+        </div>
+        <code>&lt;style><br/>
+            /*different styling for #s4/<br/>
+            #s4 .slide-pager li {<br/>
+            padding: 4px;<br/>
+            margin: 2px;<br/>
+            font-size: 0px;<br/>
+            border-radius: 8px;<br/>
+            background-color: #000;<br/>
+            float: left;<br/>
+            }<br/>
+            #s4 .slide-pager li.active {<br/>
+            background-color:red<br/>
+            }<br/>
+            &lt;/style><br/>
+            $('#s4').slideIt({'showNumbers': false});<br/>
+
+        </code>
+    </article>
+    <article>
+        <div id="s5" class="sHolder">
+            <h3>Titled Controls</h3>
+            <div class="slider">
+                <ul class="slides">
+                    <li data-title="Slide 1">test 1</li>
+                    <li data-title="Slide 2">test 2</li>
+                    <li data-title="Slide 3">test 3</li>
+                </ul>
+            </div>
+        </div>
+        <code>//add data-title attribute to each li<br/>$('#s5').slideIt({'showNumbers':false});</code>
+    </article>
+    <article>
+
+        <div id="s6" class="sHolder">
+            <h3>Titled Controls - Tab Style</h3>
+            <div class="slider">
+                <ul class="slides">
+                    <li data-title="Slide 1">test 1</li>
+                    <li data-title="Slide 2">test 2</li>
+                    <li data-title="Slide 3">test 3</li>
+                </ul>
+            </div>
+        </div>
+        <code>//add data-title attribute to each li<br/>
+            $('#s6').slideIt({<br/>
+            'auto':false,<br/>
+            'animate':false,<br/>
+            'showNumbers':false<br/>
+            });</code>
+    </article>
+
+
+    <article>
+
+        <div id="s7" class="sHolder">
+            <h3>Tab Style - Hover</h3>
+            <div class="slider">
+                <ul class="slides">
+                    <li data-title="Slide 1">test 1</li>
+                    <li data-title="Slide 2">test 2</li>
+                    <li data-title="Slide 3">test 3</li>
+                </ul>
+            </div>
+        </div>
+        <code>//add data-title attribute to each li<br/>
+            $('#s7').slideIt({<br/>
+            'auto':false,<br/>
+            'hover':true,<br/>
+            'animate':false,<br/>
+            'showNumbers':false<br/>
+            });</code>
+    </article>
+
+
+</section>
+<script src="demo.js"></script>
+</body>
+</html>

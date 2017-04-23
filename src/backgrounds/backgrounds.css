@@ -1,0 +1,48 @@
+#photo1 {
+    background: url(/staticImages/tack.png) 5px 5px no-repeat,
+    url(/staticImages/frame.png) top left no-repeat,
+    url(/staticImages/y.jpg)
+}
+
+#photo2 {
+    background: url(/staticImages/tack.png) 200px 5px no-repeat,
+    url(/staticImages/frame.png) top left no-repeat,
+    url(/staticImages//z.jpg)
+}
+
+.photo {
+    float: left;
+    position: relative;
+    height: 293px;
+    width: 243px;
+}
+
+.photo h1 {
+    color: #0546A9;
+    font-family: 'Reenie Beanie', arial, serif;
+    position: absolute;
+    top: 245px;
+    left: 35px;
+    text-shadow: none;
+    font-size: 36px;
+    margin: 0;
+}
+
+.rot10 {
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+.rot_10 {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.shadow {
+    -webkit-box-shadow: 3px 3px 7px #777;
+    -moz-box-shadow: 3px 3px 7px #777;
+    box-shadow: 3px 3px 7px #777;
+}
+

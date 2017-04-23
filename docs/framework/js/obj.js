@@ -1,1 +1,0 @@
-/*!* Insert Title JS Library 0.1* "obj" function* Author: Joe Maddalone* www.insert-title.com*/(function(){var obj = window.obj = function(something){	for ( var i = 0; i < arguments.length; i++ )	{		for ( var key in arguments[i] )		{			this[key] = arguments[i][key];		}	}} })();
