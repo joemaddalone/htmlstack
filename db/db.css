@@ -1,0 +1,58 @@
+#interface {
+    margin: 10px;
+    background-color: #fff;
+    display: block;
+    border: 2px solid #666;
+    float: left;
+    width: 740px;
+}
+
+#results {
+    float: left;
+    width: 240px;
+    height: 400px;
+    overflow: auto;
+    padding: 5px;
+    border-right: 1px solid #666;
+    margin-right: 25px;
+}
+
+#resTitle {
+    float: left;
+    width: 220px;
+    background: #999;
+    padding: 15px;
+}
+
+#editTitle {
+    background: #ccc;
+    padding: 15px;
+    float: left;
+    width: 460px
+}
+
+#resTitle, #editTitle {
+    font: bold 24px/35px Helvetica, Arial, Sans-serif;
+    color: #fff;
+    text-shadow: 0px 2px 4px #333;
+}
+
+#results div {
+    padding: 4px 17px 4px 17px;
+    border-bottom: 1px dashed green;
+}
+
+#results div:hover, #results div:focus {
+    color: #339;
+    background: #FDFEE9;
+    cursor: pointer
+}
+
+#info input[type="text"] {
+    padding: 5px;
+    font-size: 200%;
+    display: block;
+    margin-left: 5px;;
+    color: #666;
+    font-weight: bold
+}

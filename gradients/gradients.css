@@ -1,0 +1,58 @@
+.circle {
+    -moz-border-radius: 150px 150px 150px 150px;
+    -webkit-border-radius: 150px 150px 150px 150px;
+    border-radius: 150px 150px 150px 150px
+}
+
+.pearl {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 20px 20px;
+}
+
+.light {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    background: -webkit-radial-gradient(20% 20%, rgba(255, 255, 255, 0.5) 22%, rgba(255, 255, 255, 0.2) 30%);
+    background: -moz-radial-gradient(20% 20%, rgba(255, 255, 255, 0.5) 22%, rgba(255, 255, 255, 0.2) 30%);
+
+}
+
+.overcast {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    -moz-box-shadow: inset rgba(0, 0, 0, 1) 0px 0px 48px;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 1) 0 0 48px;
+    box-shadow: inset rgba(0, 0, 0, 1) 0 0 48px;
+}
+
+.darkside {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: transparent -webkit-radial-gradient(30% 30%, ellipse cover, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 72%, rgba(0, 0, 0, 0.6) 90%);
+    background: transparent -moz-radial-gradient(30% 30%, ellipse cover, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 72%, rgba(0, 0, 0, 0.6) 90%);
+}
+
+.outer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(150, 150, 150, 0.2);
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 12px;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 12px;
+    box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 12px;
+}

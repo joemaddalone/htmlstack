@@ -1,0 +1,52 @@
+#container {
+    position: relative;
+    float: left;
+
+}
+
+#controls {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+#container:hover #controls {
+    opacity: 1
+}
+
+canvas {
+    outline: 1px solid #fff
+}
+
+#lHolder {
+    height: 400px;
+    background-color: #000;
+}
+
+#list {
+    list-style: none;
+    float: left;
+    margin: 0px
+}
+
+#list li {
+    width: 200px;
+}
+
+#list li a:link, #list li a:visited {
+    list-style: none;
+    display: block;
+
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 4px 4px;
+}
+
+#list li a:hover {
+    background-color: #444
+}

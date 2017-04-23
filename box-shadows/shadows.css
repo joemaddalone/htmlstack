@@ -1,0 +1,118 @@
+.shadow {
+    position: relative;
+    z-index: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.shadow:before, .shadow:after {
+    position: absolute;
+    z-index: -1;
+}
+
+.shadow.popout:before {
+    content: "";
+    bottom: 4px;
+    left: 5%;
+    width: 90%;
+    height: 15px;
+    box-shadow: #000 0px 0px 45px,
+    #000 0px 0px 25px,
+    #000 0px 0px 12px;
+    -moz-box-shadow: #000 0px 0px 45px,
+    #000 0px 0px 25px,
+    #000 0px 0px 12px;
+    -webkit-box-shadow: #000 0px 0px 45px,
+    #000 0px 0px 25px,
+    #000 0px 0px 12px;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+}
+
+.shadow.bend:before, .shadow.bend:after {
+    content: "";
+    bottom: 11px;
+    width: 80%;
+    height: 15px;
+    box-shadow: #000 0px 0px 40px,
+    #000 0px 0px 25px;
+    -moz-box-shadow: #000 0px 0px 40px,
+    #000 0px 0px 25px;
+    -webkit-box-shadow: #000 0px 0px 40px,
+    #000 0px 0px 25px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+.shadow.peel:before, .shadow.peel:after {
+    content: "";
+    bottom: 13px;
+    width: 70%;
+    height: 20px;
+    box-shadow: #000 0px 4px 21px,
+    #000 0px 0px 20px;
+    -webkit-box-shadow: #000 0px 4px 21px,
+    #000 0px 0px 20px;
+    -moz-box-shadow: #000 4px 0px 18px,
+    #000 0px 0px 20px;
+}
+
+.shadow.peel:before {
+    right: 10px;
+    -moz-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+
+}
+
+.shadow.peel:after {
+    left: 10px;
+    -moz-transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+
+}
+
+.shadow.bend:before {
+    right: 10px;
+}
+
+.shadow.bend:after {
+    left: 10px;
+}
+
+.shadow.hover:before {
+    content: "";
+    bottom: 0px;
+    left: 2%;
+    width: 96%;
+    height: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 35px 15px,
+    rgba(0, 0, 0, 0.1) 0px 35px 25px,
+    rgba(0, 0, 0, 0.2) 0px 35px 35px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 35px 15px,
+    rgba(0, 0, 0, 0.1) 0px 35px 25px,
+    rgba(0, 0, 0, 0.2) 0px 35px 35px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 35px 15px,
+    rgba(0, 0, 0, 0.1) 0px 35px 25px,
+    rgba(0, 0, 0, 0.2) 0px 35px 35px;
+    border-radius: 100px 100px 0px 0px;
+    -moz-border-radius: 100px 100px 0px 0px;
+    -webkit-border-radius: 100px 100px 0px 0px;
+}
+
+.shadow.hover img {
+    box-shadow: #999 0px 0px 5px;
+    -moz-box-shadow: #999 0px 0px 5px;
+    -webkit-box-shadow: #999 0px 0px 5px
+}
+
+h1 {
+    margin: 25px;
+}

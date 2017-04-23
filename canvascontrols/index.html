@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 video custom controls with canvas as volume control</title>
+    <meta name="description" content="HTML5 video custom controls with canvas as volume control">
+    <link rel="stylesheet" href="canvas-controls.css">
+<link rel="stylesheet" href="/css/site.css"></head>
+<body>
+<section id="content">
+    <article>
+        <div id="container" style="position:relative"></div>
+        <div id="lHolder">
+            <ul id="list">
+                <li><a href="#" id="m">Meischeid</a></li>
+                <li><a href="#" id="bbb">Big Buck Bunny</a></li>
+                <li><a href="#" id="hs">htmlstack loop</a></li>
+
+            </ul>
+        </div>
+    </article>
+    <br clear="both">
+    <article class="description">
+        <p>The code for this is ridiculously messy, but the idea was born and I had to try it out. The video, the
+            controls and all interactions are in canvas.</p>
+        <p>Having not implemented any calculations for buffering it can be a little dodgy.</p>
+
+    </article>
+</section>
+<script src="canvas-controls.js"></script>
+<script type="text/javascript">
+    var p = new player( "s", "/video/meischeid", 640, 400 )
+    _( "m" ).addEventListener( "click", function () {
+        p = new player( "s", "/video/meischeid", 640, 400 )
+    }, false )
+    _( "bbb" ).addEventListener( "click", function () {
+        p = new player( "s", "/video/bbb", 640, 400 )
+    }, false )
+    _( "hs" ).addEventListener( "click", function () {
+        p = new player( "s", "/video/htmlstack", 640, 400 )
+    }, false )
+</script>
+<a href="/" style="display: block;margin-top: 120px;background-color: #fff;padding: 5px;color: #222;text-decoration: none;">&#x2190; back to htmlstack.com</a>
+</body>
+</html>

@@ -1,0 +1,154 @@
+@-webkit-keyframes fall {
+    from {
+        top: 100px;
+    }
+    to {
+        top: 450px;
+    }
+}
+
+@-webkit-keyframes slide {
+    from {
+        left: -0px;
+    }
+    to {
+        left: 500px;
+    }
+}
+
+@-webkit-keyframes slideAround {
+    0% {
+        left: 100px;
+    }
+    10% {
+        left: 110px;
+    }
+    20% {
+        left: 75px;
+    }
+    30% {
+        left: 80px;
+    }
+    40% {
+        left: 65px;
+    }
+    50% {
+        left: 150px;
+    }
+    60% {
+        left: 90px;
+    }
+    70% {
+        left: 300px;
+    }
+    80% {
+        left: 115px;
+    }
+    90% {
+        left: 125px;
+    }
+    100% {
+        left: 100px;
+    }
+}
+
+@-webkit-keyframes crazy {
+    0% {
+        left: 100px;
+        -webkit-transform: rotate(180deg);
+    }
+    25% {
+        left: 300px;
+        -webkit-transform: rotate(0deg);
+        font-size: 6em;
+        color: #f00;
+    }
+    28% {
+        left: 250px;
+        -webkit-transform: rotate(0deg);
+        font-size: 8em;
+        color: #f00;
+        text-shadow: 0px 0px 100px black;
+    }
+    35% {
+        left: 250px;
+        -webkit-transform: rotate(0deg);
+        font-size: 3em;
+        color: #000;
+    }
+    50% {
+        left: 75px;
+        -webkit-transform: rotate(-180deg);
+    }
+    75% {
+        left: 200px;
+        -webkit-transform: rotate(45deg);
+    }
+    100% {
+        left: 75px;
+        -webkit-transform: rotate(-1200deg)
+    }
+}
+
+#box {
+    float: left;
+    height: 450px;
+}
+
+#box .fall {
+    position: absolute;
+    top: 100;
+    -webkit-animation-name: fall;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: ease-out;
+}
+
+#box .slide {
+    position: absolute;
+    top: 100;
+    -webkit-animation-name: slide;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: ease-out;
+}
+
+#box .slideAround {
+    position: absolute;
+    top: 100;
+    left: 250;
+    -webkit-animation-name: slideAround;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+}
+
+#box .crazy {
+    position: absolute;
+    top: 100;
+    left: 250;
+    -webkit-animation-name: crazy;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+}
+
+.a1 {
+    -webkit-animation-duration: 4s;
+}
+
+.a2 {
+    -webkit-animation-duration: 8s;
+}
+
+.a3 {
+    -webkit-animation-duration: 9s;
+}
+
+.a4 {
+    -webkit-animation-duration: 3s;
+}
+
+.bigger {
+    font-size: 45px;
+    color: #eee;
+    z-index: -5
+}
