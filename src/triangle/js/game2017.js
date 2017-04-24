@@ -369,7 +369,7 @@ game.prototype = {
             if ( +timer.textContent == 0 ) {
                 self.lose()
             }
-        }, 500 )
+        }, 1000 )
     },
     lose: function () {
         /*
@@ -402,17 +402,3 @@ game.prototype = {
         return me
     }
 }
-
-// (function () {
-//     /*
-//      sets up Rules presentation onLoad
-//      */
-//     _('hideRules').onclick = function () {
-//         setClass('rules', 'slideOut');
-//         setClass('getRules', 'slideIn')
-//     };
-//     _('getRules').onclick = function () {
-//         setClass('rules', 'slideIn');
-//         setClass('getRules', 'slideOut')
-//     }
-// })();
