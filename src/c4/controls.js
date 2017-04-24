@@ -29,6 +29,8 @@ var unscrubbedColor = "#fff";
 var scrubbedColor = "#f00";
 var scrubberColor = "#000";
 var fullscreen = false;
+var vctx;
+var vpos;
 
 function makePlayer( videoID, src ) {
     /*
@@ -287,7 +289,7 @@ function loadvideo() {
             vol.addEventListener( "mouseup", function ( e ) {
                 vstopper = 1;
             }, false );
-            var vctx = vol.getContext( '2d' );
+            vctx = vol.getContext( '2d' );
             scrubbedColor = vctx.createLinearGradient( 0, 0, 0, 16 );
             scrubbedColor.addColorStop( 0, '#FF0000' );
             scrubbedColor.addColorStop( 1, '#660000' );
