@@ -1,0 +1,18 @@
+@keyframes sweep {
+    from {
+        motion-offset: 0%;
+    }
+    to {
+        motion-offset: 100%;
+    }
+}
+
+#triangle {
+    width: 64px;
+    height: 64px;
+    background-color: rgba(0,0,0, 0.5);
+    motion-path: path('M50,50 L50,400 L400,400, C 390,390 600,50 50,50');
+    motion-rotation: auto;
+    animation: sweep 5s 0s infinite linear;
+
+}
