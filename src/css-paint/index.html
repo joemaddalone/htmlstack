@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>css-paint</title>
+	<style>
+		textarea {
+		  background-image: paint(checkerboard);
+		}
+	  </style>
+</head>
+
+<body>
+	<textarea></textarea>
+	<hr/>
+	^^ resize that ^^
+	<script>
+		if ('paintWorklet' in CSS) {
+		  CSS.paintWorklet.addModule('checkerboard.js');
+		} else {
+		  document.body.innerHTML = 'You need support for <a href="https://drafts.css-houdini.org/css-paint-api/">CSS Paint API</a> to view this demo :( -- available in Chrome 65 or Canary';
+		}
+	  </script>
+</body>
+
+</html>
