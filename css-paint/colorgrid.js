@@ -4,12 +4,12 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ColorGrid = function () {
-	function ColorGrid() {
-		_classCallCheck(this, ColorGrid);
+var ColorGridPainter = function () {
+	function ColorGridPainter() {
+		_classCallCheck(this, ColorGridPainter);
 	}
 
-	_createClass(ColorGrid, [{
+	_createClass(ColorGridPainter, [{
 		key: 'paint',
 		value: function paint(ctx, geom, properties) {
 			var random_color = function random_color() {
@@ -28,7 +28,7 @@ var ColorGrid = function () {
 		}
 	}]);
 
-	return ColorGrid;
+	return ColorGridPainter;
 }();
 
-registerPaint('checkerboard', ColorGrid);
+registerPaint('colorgrid', ColorGridPainter);
