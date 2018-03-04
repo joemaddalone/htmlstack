@@ -8,7 +8,7 @@
 	<title>css-paint</title>
 	<style>
 		textarea {
-		  background-image: paint(checkerboard);
+		  background-image: paint(colorgrid);
 		}
 	  </style>
 </head>
@@ -19,7 +19,7 @@
 	^^ resize that ^^
 	<script>
 		if ('paintWorklet' in CSS) {
-		  CSS.paintWorklet.addModule('checkerboard.js');
+		  CSS.paintWorklet.addModule('./colorgrid.js');
 		} else {
 		  document.body.innerHTML = 'You need support for <a href="https://drafts.css-houdini.org/css-paint-api/">CSS Paint API</a> to view this demo :( -- available in Chrome 65 or Canary';
 		}

@@ -1,4 +1,4 @@
-class ColorGrid {
+class ColorGridPainter {
 	paint(ctx, geom, properties) {
 		const random_color = () => {
 			let rint = Math.round(0xffffff * Math.random());
@@ -16,4 +16,4 @@ class ColorGrid {
 	}
 }
 
-registerPaint('checkerboard', ColorGrid);
+registerPaint('colorgrid', ColorGridPainter);
