@@ -1,0 +1,25 @@
+.container, .content {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 500px;
+	margin: 200px auto;
+}
+
+.ball {
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+}
+
+.green {
+	background-color: lightgreen;
+}
+
+.rebecca {
+	background-color: rebeccapurple;
+}
+
+.blue {
+	background-color: mediumslateblue;
+}
