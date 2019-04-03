@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Pipeline operator</title>
+	<style>
+		.result {
+			border: 1px solid #ccc;
+			padding: 10px;
+		}
+
+		pre {
+			font-family: monospace;
+			background-color: #f8f8f8;
+			padding: 5px 8px;
+			line-height: 1.5;
+			font-size: 16px;
+			border: 1px solid goldenrod;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="width: 800px;margin: 0 auto;">
+		<h1>Pipeline Operator</h1>
+		<p>
+			Assume we have the following functions:
+		</p>
+		<pre>const repeat = str => `${str}, ${str}`;
+const capitalize = str => str[0].toUpperCase() + str.substring(1);
+const exclaim = str => `${str}!`;</pre>
+		<p>
+			To apply all of these functions to a single string we need to:
+		</p>
+		<pre>
+const newString = exclaim(capitalize(repeat("yo")));
+document.getElementById('string-1').innerText = newString;</pre>
+		<p class="result">Result: <b id="string-1"></b></p>
+		<p>
+			With the pipeline operator we can now do it like this:
+		</p>
+		<pre>const pipedString = "yo"
+	|> repeat
+	|> capitalize
+	|> exclaim;
+
+document.getElementById('string-2').innerText = pipedString;</pre>
+		<p class="result">Result: <b id="string-2"></b></p>
+	</div>
+
+
+
+
+	<script src="pipeline-operator.js"></script>
+</body>
+
+</html>
