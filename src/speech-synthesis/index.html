@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Speech Synthesis</title>
+    <style>
+        .content {
+            margin-top: 10px;
+            width: 800px;
+            min-height: 250px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #text {
+            color: #222;
+            transition: all 0.5s ease-in;
+            text-align: center;
+            font-size: 48px;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #222;
+        }
+        .controls {
+            align-self: center
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id="text" contenteditable="true">
+            Edit this text.
+        </div>
+        <div class="controls">
+            <label for="voices">Voice</label>
+            <select id="voices"></select>
+            <button>Speak</button>
+        </div>
+    </div>
+    <script src="speech-synth.js"></script>
+</body>
+
+</html>
