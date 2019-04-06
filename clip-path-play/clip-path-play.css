@@ -1,0 +1,25 @@
+#square-holder {
+	width: 450px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.square {
+	transition: all 0.1s ease-in-out;
+	width: 5px;
+	height: 5px;
+	margin: 0;
+	background-color: #000;
+}
+
+.square:hover {
+	background-color: #fff;
+}
+
+
+
+
+Hey Tyler, as we near announcing the speaker list on the website we’re also planning to send a brief email about each of the speakers to our subscribers.  These would likely start going out some time next week.
+
+It would look something like this and we’re hoping you might be able to provide a short two or three sentence bio. -- we took a weak stab at it in the screenshot
